@@ -1,1 +1,0 @@
-# Configuration: paths, params, etc.
