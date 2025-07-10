@@ -17,6 +17,33 @@ This repository is part of a Retrieval-Augmented Generation (RAG) pipeline proje
 
 ---
 
-## 📁 Directory Structure (Tasks 1 & 2)
+
+---
+
+##  Tasks Completed
+
+###  Task 1: EDA & Preprocessing
+- Loaded large CFPB complaint dataset in chunks (5GB+)
+- Filtered to relevant products (BNPL, Loans, etc.)
+- Cleaned and normalized complaint narratives
+- Output saved to `data/processed/filtered_complaints.csv`
+
+###  Task 2: Embedding & Indexing
+- Split long narratives into chunks using `RecursiveCharacterTextSplitter`
+- Embedded using `sentence-transformers/all-MiniLM-L6-v2`
+- Stored in FAISS vector DB + saved complaint metadata for traceability
+
+###  Task 3: RAG Pipeline & Evaluation
+- Created prompt templates and retrieval logic
+- Integrated LLM via Hugging Face transformers (can be swapped to Mistral or LLaMA)
+- Evaluated system with real user queries (BNPL, transfers, loans, etc.)
+
+###  Task 4: UI Interface
+- Built with Streamlit
+- Allows any internal stakeholder to ask questions like:  
+  `"What complaints do users have about money transfers?"`  
+- Displays both the **LLM response** and **source excerpts** for transparency
+
+---
 
 i_rag_chatbot — RAG-based chatbot for CFPB data
